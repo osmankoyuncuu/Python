@@ -1,12 +1,12 @@
-# Görev : 
-# Diyelim ki; Geçmişte ihtiyacınız olan bir şifreyi yazdıran bir mesaj bıraktınız. 
-# Yazmış olduğunuz şifreyi görebilmek için adınızı girmeniz ve programın sizi tanıması gerekmektedir. öyle bir program yazın . 
-# Kullanıcıdan ilk adı alır ve sizinkiyle karşılaştırır,
-# Ardından, kullanıcının girdiği ad sizinkiyle aynıysa, "Merhaba Yusuf ! Şifre: W@12" gibi bir çıktı alın,
-# Kullanıcının girdiği ad sizinkiyle aynı değilse, "Merhaba, Amina ! Sonra görüşürüz" gibi bir çıktı alın.
+# Task : Let's say; you left a message in the past that prints a password you need. To see the password you wrote, you need to enter your name and the program should recognize you.
+# Write a program that 
+# Takes the first name from the user and compares it to yours,
+# Then if the name the user entered is the same as yours, print out such as : "Hello, Joseph! The password is : W@12",
+# If the name the user entered is not the same as yours, print out such as : "Hello, Amina! See you later.
 user_input = input("Enter your name: ")
-user = {"osman" : "Ankara@06"}
+user_input = user_input.title()
+user = {"Osman" : "Ankara@06"}
 if user_input in user.keys() :
-    print("Hello Osman! Password : ", user[user_input])
+    print(f"Hello {user_input}! Password is : ", user[user_input])
 else:
-    print("Hello guest ! See you later.")
+    print(f"Hello {user_input}! See you later.")
